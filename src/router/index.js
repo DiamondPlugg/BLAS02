@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Account from '../views/Account.vue';
 import Admin from '../views/Admin.vue';
@@ -24,7 +24,7 @@ const routes = [
 ];
 
 const router = createRouter({
-   history: createWebHistory('/BLAS02/'),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior: function (to, from, savedPosition) {
     if (savedPosition) {
