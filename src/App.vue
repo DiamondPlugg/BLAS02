@@ -38,6 +38,7 @@ function handleAuth() {
 
   const { username, password, email } = authForm.value;
 
+  // Базовая проверка полей
   if (!username || !password) {
     authError.value = 'Заполните все поля';
     return;
@@ -55,20 +56,27 @@ function handleAuth() {
     }
   }
 
+  // Вызов функций из композабла
   if (authModal.value.mode === 'login') {
     result = login(username, password);
   } else {
+    // Теперь register внутри себя вызовет login и вернет '' при успехе
     result = register(username, email, password);
   }
 
   if (result === '') {
+    // Если вход/регистрация успешны
     authModal.value.show = false;
     authForm.value = { username: '', email: '', password: '' };
+
+    // Опционально: если мы хотим после регистрации сразу кинуть человека в профиль
+    if (authModal.value.mode === 'reg') {
+      router.push('/account');
+    }
   } else {
     authError.value = result;
   }
 }
-
 function scrollToHalls() {
   const scrollAction = function () {
     setTimeout(function () {

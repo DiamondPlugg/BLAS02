@@ -63,26 +63,27 @@ export function useUsers() {
    * Регистрация нового пользователя.
    */
   function register(username, email, password) {
-    const users = getUsers();
-    
-    const isTaken = users.some(function (u) {
-      return u.username === username;
-    });
-
-    if (isTaken) return 'Ник занят';
-
-    users.push({ 
-        id: Date.now(), 
-        username: username, 
-        email: email, 
-        password: password, 
-        role: 'user', 
-        avatar: '' 
-    });
-    
-    saveUsers(users);
-    return ''; 
+  const users = JSON.parse(localStorage.getItem('studio_users') || '[]');
+  
+  if (users.find(u => u.username === username)) {
+    return 'Пользователь с таким никнеймом уже существует';
   }
+
+  const newUser = {
+    id: Date.now(),
+    username,
+    email,
+    password,
+    role: 'user' // по умолчанию обычный пользователь
+  };
+
+  users.push(newUser);
+  localStorage.setItem('studio_users', JSON.stringify(users));
+
+  // АВТОМАТИЧЕСКИЙ ВХОД:
+  // Вызываем функцию login, которая уже есть в этом же композабле
+  return login(username, password); 
+}
 
   /**
    * Выход из системы.
