@@ -59,7 +59,7 @@ const sortedHalls = computed(() => {
           <div class="halls-grid">
             <div v-for="hall in sortedHalls" :key="hall.id" class="hall-card" @click="$router.push('/hall/' + hall.id)">
               <div class="hall-image">
-                <img :src="hall.faceImage || 'default1.jpg'" alt="зал" @error="handleImgError">
+                <img :src="hall.faceImage || '/default1.jpg'" alt="зал" @error="handleImgError">
                 <div class="price-tag">{{ hall.price }} ₽/час</div>
               </div>
               <div class="hall-info">
@@ -85,7 +85,7 @@ const sortedHalls = computed(() => {
         </router-link>
       </div>
       <div class="cert-image-container">
-        <img class="cert-image-placeholder" src="hero_sertificate.jpg" alt="Сертификат" />
+        <img class="cert-image-placeholder" src="/hero_sertificate.jpg" alt="Сертификат" />
       </div>
     </section>
 
