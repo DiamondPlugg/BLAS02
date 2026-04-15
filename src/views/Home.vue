@@ -5,7 +5,7 @@ import { hallsData } from '../data/hallsData';
 const sortBy = ref('default');
 
 const sortedHalls = computed(() => {
-  let list = [...hallsData];
+  let list = JSON.parse(localStorage.getItem("studio_halls"));
 
   if (sortBy.value === 'price') {
     list.sort((a, b) => a.price - b.price);
