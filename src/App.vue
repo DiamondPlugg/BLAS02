@@ -71,7 +71,7 @@ function handleAuth() {
 
     // Опционально: если мы хотим после регистрации сразу кинуть человека в профиль
     if (authModal.value.mode === 'reg') {
-      router.push('/account');
+      router.push('/home');
     }
   } else {
     authError.value = result;
