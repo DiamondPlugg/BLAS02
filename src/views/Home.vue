@@ -23,7 +23,7 @@ const sortedHalls = computed(() => {
 
 <template>
   <div class="home-page">
-    <section class="hero" :style="{ backgroundImage: 'url(/hero-main-fon.jpg)' }">
+    <section class="hero" :style="{ backgroundImage: 'url(hero-main-fon.jpg)' }">
       <div class="hero-content">
         <h1 class="hero-title">PhotoStudio</h1>
         <p class="hero-subtitle">Между светом и тенью</p>
