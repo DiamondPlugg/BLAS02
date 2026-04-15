@@ -5,7 +5,7 @@ import { hallsData } from '../data/hallsData';
 const sortBy = ref('default');
 
 const sortedHalls = computed(() => {
-  let list = [...hallsData];
+  let list = JSON.parse(localStorage.getItem("studio_halls"));
 
   if (sortBy.value === 'price') {
     list.sort((a, b) => a.price - b.price);
@@ -23,7 +23,7 @@ const sortedHalls = computed(() => {
 
 <template>
   <div class="home-page">
-    <section class="hero" :style="{ backgroundImage: 'url(/hero_main_fon.jpg)' }">
+    <section class="hero" :style="{ backgroundImage: 'url(/hero-main-fon.jpg)' }">
       <div class="hero-content">
         <h1 class="hero-title">PhotoStudio</h1>
         <p class="hero-subtitle">Между светом и тенью</p>
