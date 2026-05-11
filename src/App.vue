@@ -159,9 +159,9 @@ onUnmounted(function () {
           <div class="footer-col">
             <h4>Контакты</h4>
             <ul class="contacts-list">
-              <li>Адрес: Невский проспект, 2к5, г. СПб</li>
+              <li>Адрес: Алматы, микрорайон Жетысу-2, 16А</li>
               <li>Режим: ежедневно с 8:00 до 22:00</li>
-              <li>Тел: +7 (927) 506-11-06</li>
+              <li>Тел: +7 (701) 088-11-24</li>
               <li>Email: support@BLAS.support</li>
             </ul>
           </div>
