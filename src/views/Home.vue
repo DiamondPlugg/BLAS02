@@ -94,14 +94,13 @@ const sortedHalls = computed(() => {
       <div class="footer-info-grid">
         <div class="info-block">
           <h4>Адрес</h4>
-          <p>Невский проспект, 2к5</p>
-          <p>г. Санкт-Петербург</p>
+          <p>Алматы, микрорайон Жетысу-2, 16А</p>
           <p>с 8:00 до 22:00</p>
         </div>
         <div class="info-block">
           <h4>Контакты</h4>
           <p>support@BLAS.support</p>
-          <p>+7 (937) 506-11-06</p>
+          <p>+7 (701) 088-11-24</p>
         </div>
         <div class="info-block">
           <h4>Соцсети</h4>
