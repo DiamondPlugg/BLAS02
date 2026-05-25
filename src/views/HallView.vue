@@ -76,7 +76,7 @@ onMounted(() => {
                             <li><span>Потолки:</span> {{ hall.ceilingHeight }} м</li>
                             <li><span>Свет:</span> {{ hall.lighting }}</li>
                         </ul>
-                        <p class="price-tag">Цена от {{ hall.price }} ₽/час</p>
+                        <p class="price-tag">Цена от {{ hall.price }} ₸/час</p>
                         <div class="stars">
                             <span v-for="n in hall.rating" :key="n">★</span>
                         </div>
