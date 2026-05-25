@@ -60,7 +60,7 @@ const sortedHalls = computed(() => {
             <div v-for="hall in sortedHalls" :key="hall.id" class="hall-card" @click="$router.push('/hall/' + hall.id)">
               <div class="hall-image">
                 <img :src="hall.faceImage || '/default1.jpg'" alt="зал" @error="handleImgError">
-                <div class="price-tag">{{ hall.price }} ₽/час</div>
+                <div class="price-tag">{{ hall.price }} ₸/час</div>
               </div>
               <div class="hall-info">
                 <h3>{{ hall.name }}</h3>
