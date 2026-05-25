@@ -169,7 +169,7 @@ onMounted(() => {
                     <button v-for="room in availableRooms" :key="room.id"
                         :class="['room-card', { active: form.room === room.name }]" @click="selectRoom(room)">
                         <div class="room-name">{{ room.name }}</div>
-                        <div class="room-price">{{ room.price }} ₽ / час</div>
+                        <div class="room-price">{{ room.price }} ₸ / час</div>
                     </button>
                 </div>
             </div>
